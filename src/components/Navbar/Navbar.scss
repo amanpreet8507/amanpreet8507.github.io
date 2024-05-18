@@ -10,15 +10,22 @@
     gap: 60px;
     font-size: 20px;
   }
+  &__menu li:hover {
+    background: linear-gradient(to right, rgb(186, 98, 16), rgba(255, 0, 0, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+  }
   &__connect {
     padding: 20px 40px;
     border-radius: 50px;
-    background: linear-gradient(to right, rgb(186, 98, 16), rgba(255,0,0,1));
+    background: linear-gradient(to right, rgb(186, 98, 16), rgba(255, 0, 0, 1));
     font-size: 22px;
     cursor: pointer;
     transition: 0.4s;
   }
-  &__connect:hover{
+  &__connect:hover {
     transform: scale(1.05);
   }
 }

@@ -28,8 +28,10 @@
     line-height: 40px;
   }
   &__action {
+    width: 43%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 50px;
