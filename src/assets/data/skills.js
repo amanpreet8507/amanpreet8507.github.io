@@ -4,14 +4,14 @@ const SkillsData = [
     area: "Frontend Development",
     description:
       "A good frontend makes a website or app easy ot use, attractive & engaging which keeps users happy & encourages them to keep using it.",
-    skills: ["Figma", "Balsamiq", "Photoshop"],
+    skills: ["React.js", "Javascript", "Angular", "Typescript"],
   },
   {
     id: 2,
     area: "Backend Development",
     description:
       "Backend manages the server, database & application logic, security, making sure everything works smoothly behind the scenes",
-    skills: ["Figma", "Balsamiq", "Photoshop"],
+    skills: ["Node.js", "MySQL", "Express", "Next.js"],
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const SkillsData = [
     area: "Product Management",
     description:
       "Product Management guides the development, launch & improvement of products, making sure that they meet user requirements, align with business goals, and succeed in the market.",
-    skills: ["Figma", "Balsamiq", "Photoshop"],
+    skills: ["Jira", "Github", "Git", "Trello"],
   },
 ];
 

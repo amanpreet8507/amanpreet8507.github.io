@@ -55,6 +55,15 @@
     // line-height: 40px;
     // max-width: 300px;
   }
+  &__skills-container{
+    display: flex;
+    gap:10px;
+  }
+  &__skill{
+    background-image:linear-gradient(270deg, #ba6210 50.41%, #ff0000);;
+    padding: 10px;
+    border-radius: 7px;
+  }
   &__readmore {
     display: flex;
     gap: 20px;
