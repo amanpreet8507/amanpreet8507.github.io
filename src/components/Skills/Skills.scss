@@ -10,8 +10,8 @@
   }
   &__title h1 {
     padding: 0px 30px;
-    font-size: 40px;
-    font-weight: 600;
+    font-size: 80px;
+    font-weight: 700;
   }
   &__title img {
     width: 260px;
@@ -42,8 +42,8 @@
     font-weight: 600;
   }
   &__format h2 {
-    // font-size: 38px;
-    // font-weight: 800;
+    font-size: 38px;
+    font-weight: 800;
     background: linear-gradient(270deg, #ba6210 50.41%, #ff0000);
     background-clip: text;
     -webkit-background-clip: text;
@@ -51,9 +51,9 @@
   }
   &__format-p {
     color: #9f9a9a;
-    // font-size: 24px;
-    // line-height: 40px;
-    // max-width: 300px;
+    font-size: 24px;
+    line-height: 40px;
+    max-width: 300px;
   }
   &__skills-container{
     display: flex;

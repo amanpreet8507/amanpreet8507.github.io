@@ -1,0 +1,113 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+  &__title {
+    position: relative;
+  }
+  &__title h1 {
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 600;
+  }
+  &__title img {
+    width: 230px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+  &__detail img {
+    width: 20px;
+    height: 20px;
+  }
+  &__section {
+    display: flex;
+    gap: 150px;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  &__left h1 {
+    font-size: 80px;
+    font-weight: 700;
+    background: linear-gradient(to right, rgb(186, 98, 16), rgba(255, 0, 0, 1));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__left p {
+    max-width: 550px;
+    color: #d8d8d8;
+    font-size: 20px;
+    line-height: 35px;
+  }
+  &__left a{
+    color: #d8d8d8;
+    text-decoration: none;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #d8d8d8;
+    font-size: 22px;
+  }
+  &__detail {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+  }
+  &__right label {
+    color: #d8d8d8;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  &__right input {
+    border: none;
+    width: 700px;
+    height: 78px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #a0a0a0;
+    font-family: Outfit;
+    font-size: 20px;
+  }
+  &__right textarea {
+    width: 650px;
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    background: #323232;
+    color: #a0a0a0;
+    font-family: Outfit;
+    font-size: 20px;
+  }
+  &__button {
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(to right, rgb(186, 98, 16), rgba(255, 0, 0, 1));
+    font-size: 22px;
+    padding: 20px 60px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  &__button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+}
