@@ -6,7 +6,7 @@ import chevron from "../../assets/images/chevron_right-24px.svg";
 
 const Skills = () => {
   return (
-    <div className="skills">
+    <div id="skills" className="skills">
       <div className="skills__title">
         <h1>My Skill Set</h1>
         <img src={icon} alt="skills" />

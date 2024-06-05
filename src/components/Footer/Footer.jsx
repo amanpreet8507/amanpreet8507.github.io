@@ -2,6 +2,8 @@ import React from "react";
 import "./Footer.scss";
 import profileIcon from "../../assets/images/profile_icon.png";
 import myIcon from "../../assets/images/Am.png";
+import arrowUp from "../../assets/images/upArrow.svg";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Footer = () => {
   return (
@@ -10,7 +12,8 @@ const Footer = () => {
         <div className="footer__top-left">
           <img src={myIcon} alt="my icon" />
           <p>
-            I am a frontend developer living in Vancouver, BC, and exploring the city.
+            I am a frontend developer living in Vancouver, BC, and exploring the
+            city.
           </p>
         </div>
         <div className="footer__top-right">
@@ -20,6 +23,11 @@ const Footer = () => {
           </div>
           <div className="footer__subscribe">Subscribe</div>
         </div>
+      </div>
+      <div className="footer__arrow">
+        <AnchorLink offset="100" href="#nav">
+          <img src={arrowUp} alt="arrow" />
+        </AnchorLink>
       </div>
       <hr />
       <div className="footer__bottom">

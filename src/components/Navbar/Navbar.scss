@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 20px;
-  img{
+  img {
     width: 100px;
   }
   &__menu {
@@ -13,22 +13,33 @@
     gap: 60px;
     font-size: 20px;
   }
+  &__menu-li {
+    padding: 10px 20px;
+    border-bottom: 4px solid #ba6210;
+    cursor: pointer;
+  }
   &__menu li:hover {
-    background: linear-gradient(to right, rgb(186, 98, 16), rgba(255, 0, 0, 1));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     cursor: pointer;
   }
   &__connect {
     padding: 20px 40px;
     border-radius: 50px;
-    background: linear-gradient(to right, rgb(186, 98, 16), rgba(255, 0, 0, 1));
+    background: linear-gradient(to right, #ba6210, rgba(255, 0, 0, 1));
     font-size: 22px;
     cursor: pointer;
     transition: 0.4s;
   }
   &__connect:hover {
     transform: scale(1.05);
+  }
+  &__menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  &__menu-link {
+    text-decoration: none;
+    color: white;
   }
 }
