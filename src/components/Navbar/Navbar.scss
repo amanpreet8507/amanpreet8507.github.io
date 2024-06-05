@@ -1,10 +1,43 @@
+@use "../../styles/partials/mixins" as *;
+
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 20px;
-  img {
-    width: 100px;
+  @include mobile {
+    margin: 20px 50px;
+  }
+  &__mob-close {
+    display: none;
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: block;
+      position: relative;
+      top: 30px;
+      left: 150px;
+      width: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  &__mob-open {
+    display: none;
+    @include tablet {
+      display: none;
+    }
+    @include mobile {
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: fixed;
+      right: 30px;
+      top: 30px;
+    }
+  }
+  &__icon {
+    width: 80px;
   }
   &__menu {
     display: flex;
@@ -12,11 +45,26 @@
     list-style: none;
     gap: 60px;
     font-size: 20px;
+    @include mobile {
+      position: fixed;
+      flex-direction: column;
+      align-items: center;
+      top: 0;
+      gap: 30px;
+      background-color: black;
+      width: 350px;
+      height: 100%;
+      z-index: 2;
+      transition: right 0.5s;
+      right: -350px;
+    }
   }
   &__menu-li {
     padding: 10px 20px;
     border-bottom: 4px solid #ba6210;
     cursor: pointer;
+    @include mobile {
+    }
   }
   &__menu li:hover {
     cursor: pointer;
@@ -28,6 +76,9 @@
     font-size: 22px;
     cursor: pointer;
     transition: 0.4s;
+    @include mobile {
+      display: none;
+    }
   }
   &__connect:hover {
     transform: scale(1.05);
@@ -37,6 +88,11 @@
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+    @include mobile {
+      font-size: 25px;
+      flex-direction: row;
+      gap: 20px;
+    }
   }
   &__menu-link {
     text-decoration: none;

@@ -6,6 +6,30 @@ import phone_icon from "../../assets/images/phone.png";
 import location_icon from "../../assets/images/location.png";
 
 const Contact = () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "5521aa35-76ca-4703-bfd9-2f1f80d81946");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      alert(res.message);
+      event.target.reset();
+    }
+  };
+
   return (
     <div className="contact">
       <div className="contact__title">
@@ -23,7 +47,9 @@ const Contact = () => {
           <div className="contact__details">
             <div className="contact__detail">
               <img src={mail_icon} alt="mail" />
-              <a href="mailto:amanpreet8507@gmail.com">amanpreet8507@gmail.com</a>
+              <a href="mailto:amanpreet8507@gmail.com">
+                amanpreet8507@gmail.com
+              </a>
             </div>
             <div className="contact__detail">
               <img src={phone_icon} alt="mail" />
@@ -35,15 +61,19 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <form action="" className="contact__right">
+        <form onSubmit={onSubmit} action="" className="contact__right">
           <label htmlFor="">Your name</label>
-          <input type="text" placeholder="Enter your name" name="name"/>
+          <input type="text" placeholder="Enter your name" name="name" />
           <label htmlFor="">Your Email</label>
-          <input type="text" placeholder="Enter your email" name="email"/>
+          <input type="text" placeholder="Enter your email" name="email" />
           <label htmlFor="">Your Contact Number</label>
-          <input type="text" placeholder="Enter your contact number" name="phone"/>
+          <input
+            type="text"
+            placeholder="Enter your contact number"
+            name="phone"
+          />
           <label htmlFor="">Write your message here</label>
-          <textarea rows="8" type="text" placeholder="Message" name="message"/>
+          <textarea rows="8" type="text" placeholder="Message" name="message" />
           <button className="contact__button">Submit</button>
         </form>
       </div>
