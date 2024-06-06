@@ -1,9 +1,16 @@
+@use "../../styles/partials/mixins" as *;
+
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0px 80px;
+  @include mobile {
+    gap: 80px;
+    margin: 50px 70px;
+    align-items: start;
+  }
   &__title {
     position: relative;
     margin-bottom: 30px;
@@ -12,6 +19,10 @@
     padding: 0px 30px;
     font-size: 80px;
     font-weight: 600;
+    @include mobile {
+      font-size: 50px;
+      padding: 0;
+    }
   }
   &__title img {
     width: 420px;
@@ -19,10 +30,22 @@
     position: absolute;
     bottom: 0;
     z-index: -1;
+    @include mobile {
+      width: 250px;
+      right: -20px;
+    }
   }
   &__sections {
     display: flex;
     gap: 80px;
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    @include mobile {
+      display: none;
+    }
   }
   &__profile-img {
     border-radius: 10px;
@@ -31,13 +54,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 80px;
   }
   &__p {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     font-size: 24px;
     font-weight: 500;
+    @include mobile {
+      font-size: 18px;
+      line-height: 32px;
+    }
   }
   &__skills {
     display: flex;
@@ -49,11 +76,18 @@
     gap: 50px;
     align-items: center;
     transition: 0.3s;
+    @include mobile {
+      gap: 20px;
+      align-items: center;
+    }
   }
   &__skill p {
     min-width: 150px;
     font-size: 24px;
     font-weight: 500;
+    @include mobile {
+      font-size: 20px;
+    }
   }
   &__skill hr {
     outline: none;
@@ -62,6 +96,9 @@
     height: 8px;
     border-radius: 50px;
     background: linear-gradient(to right, rgb(186, 98, 16), rgba(255, 0, 0, 1));
+    @include mobile {
+      height: 6px;
+    }
   }
   &__skill:hover {
     transform: scale(1.05);
@@ -72,6 +109,9 @@
     width: 100%;
     justify-content: space-around;
     margin: 80px 0px;
+    @include mobile {
+      justify-content: space-between;
+    }
   }
   &__achievement {
     display: flex;
@@ -79,6 +119,9 @@
     align-items: center;
     gap: 10px;
     transition: 1s;
+    @include mobile {
+      gap: 10px;
+    }
   }
   &__achievement h1 {
     font-size: 60px;
@@ -87,10 +130,18 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include mobile {
+      font-size: 34px;
+      font-weight: 700;
+    }
   }
   &__achievement p {
     font-size: 22px;
     font-weight: 500;
+    @include mobile {
+      text-align: center;
+      font-size: 16px;
+    }
   }
   &__achievement:hover {
     transform: scale(1.12);
