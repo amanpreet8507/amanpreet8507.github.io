@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixins" as *;
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,11 @@
   justify-content: center;
   gap: 80px;
   margin: 80px 170px;
+  @include mobile {
+    gap: 50px;
+    margin: 50px 70px;
+    align-items: start;
+  }
   &__title {
     position: relative;
   }
@@ -12,13 +19,24 @@
     padding: 0px 30px;
     font-size: 80px;
     font-weight: 600;
+    @include mobile {
+      padding: 0;
+      font-size: 50px;
+      font-weight: 600;
+    }
   }
   &__title img {
-    width: 230px;
+    width: 200px;
     height: 30px;
+    right: 0px;
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     z-index: -1;
+    @include mobile {
+      width: 130px;
+      right: -20px;
+      bottom: -10px;
+    }
   }
   &__detail img {
     width: 20px;
@@ -27,6 +45,10 @@
   &__section {
     display: flex;
     gap: 150px;
+    @include mobile {
+      flex-direction: column;
+      width: 99.8%;
+    }
   }
   &__left {
     display: flex;
@@ -40,14 +62,20 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @include mobile {
+      font-size: 54px;
+    }
   }
   &__left p {
     max-width: 550px;
     color: #d8d8d8;
     font-size: 20px;
     line-height: 35px;
+    @include mobile {
+      font-size: 18px;
+    }
   }
-  &__left a{
+  &__left a {
     color: #d8d8d8;
     text-decoration: none;
   }
@@ -73,6 +101,9 @@
     color: #d8d8d8;
     font-size: 22px;
     font-weight: 500;
+    @include mobile {
+      font-size: 20px;
+    }
   }
   &__right input {
     border: none;
@@ -84,6 +115,10 @@
     color: #a0a0a0;
     font-family: Outfit;
     font-size: 20px;
+    @include mobile {
+      width: 100%;
+      font-size: 20px;
+    }
   }
   &__right textarea {
     width: 650px;
@@ -94,6 +129,10 @@
     color: #a0a0a0;
     font-family: Outfit;
     font-size: 20px;
+    @include mobile {
+      width: 95%;
+      font-size: 20px;
+    }
   }
   &__button {
     border: none;
@@ -105,6 +144,10 @@
     margin-bottom: 50px;
     cursor: pointer;
     transition: 0.3s;
+    @include mobile {
+      font-size: 20px;
+      padding: 15px 40px;
+    }
   }
   &__button:hover {
     transform: scale(1.1);

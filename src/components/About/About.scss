@@ -8,12 +8,15 @@
   margin: 0px 80px;
   @include mobile {
     gap: 80px;
-    margin: 50px 70px;
+    margin: 50px 70px 50px 30px;
     align-items: start;
   }
   &__title {
     position: relative;
     margin-bottom: 30px;
+    @include mobile {
+      margin: 0;
+    }
   }
   &__title h1 {
     padding: 0px 30px;
@@ -25,21 +28,25 @@
     }
   }
   &__title img {
-    width: 420px;
+    width: 200px;
+    right: 0px;
     height: 30px;
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     z-index: -1;
     @include mobile {
-      width: 250px;
+      width: 130px;
       right: -20px;
+      bottom: -10px;
     }
   }
   &__sections {
+    padding-top: 60px;
     display: flex;
     gap: 80px;
     @include mobile {
       flex-direction: column;
+      padding-top: 0;
     }
   }
   &__left {
@@ -140,7 +147,8 @@
     font-weight: 500;
     @include mobile {
       text-align: center;
-      font-size: 16px;
+      font-size: 14px;
+      padding: 5px 0;
     }
   }
   &__achievement:hover {

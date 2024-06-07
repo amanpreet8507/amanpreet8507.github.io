@@ -1,18 +1,27 @@
+@use "../../styles/partials/mixins" as *;
+
 .footer {
   margin: 50px 170px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  &__arrow{
+  @include mobile {
+    margin: 50px 70px;
+  }
+  &__arrow {
     display: flex;
     justify-content: end;
   }
-  &__arrow img{
+  &__arrow img {
     width: 20px;
   }
   &__top {
     display: flex;
     justify-content: space-between;
+    @include mobile {
+      flex-direction: column;
+      gap: 50px;
+    }
   }
   &__top img {
     width: 100px;
@@ -59,6 +68,11 @@
     justify-content: space-between;
     font-size: 18px;
     padding-bottom: 40px;
+    @include mobile{
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 50px;
+    }
   }
   &__bottom-right {
     margin-bottom: 50px;

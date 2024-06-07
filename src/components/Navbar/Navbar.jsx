@@ -16,7 +16,10 @@ const Navbar = () => {
   const closeMenu = () => {
     menuRef.current.style.right = "-350px";
   };
-
+  const handleMenuClick = (menuName) => {
+    setMenu(menuName);
+    closeMenu();
+  };
   return (
     <div className="nav" id="nav">
       <Link to="/">
@@ -24,7 +27,7 @@ const Navbar = () => {
           className="nav__icon"
           src={my_icon}
           alt="my icon"
-          onClick={() => setMenu("home")}
+          onClick={() => handleMenuClick("home")}
         />
       </Link>
       <img
@@ -42,32 +45,32 @@ const Navbar = () => {
         />
         <li className={menu === "home" ? "nav__menu-li" : ""}>
           <Link className="nav__menu-link" to="/">
-            <p onClick={() => setMenu("home")}>Home</p>
+            <p onClick={() => handleMenuClick("home")}>Home</p>
           </Link>
         </li>
         <li className={menu === "about" ? "nav__menu-li" : ""}>
           <Link className="nav__menu-link" to="/about">
-            <p onClick={() => setMenu("about")}>About Me</p>
+            <p onClick={() => handleMenuClick("about")}>About Me</p>
           </Link>
         </li>
         <li className={menu === "skills" ? "nav__menu-li" : ""}>
           <Link className="nav__menu-link" to="/skills">
-            <p onClick={() => setMenu("skills")}>Skill Set</p>
+            <p onClick={() => handleMenuClick("skills")}>Skill Set</p>
           </Link>
         </li>
         <li className={menu === "portfolio" ? "nav__menu-li" : ""}>
           <Link className="nav__menu-link" to="/projects">
-            <p onClick={() => setMenu("portfolio")}>Portfolio</p>
+            <p onClick={() => handleMenuClick("portfolio")}>Portfolio</p>
           </Link>
         </li>
         <li className={menu === "contact" ? "nav__menu-li" : ""}>
           <Link className="nav__menu-link" to="/contact">
-            <p onClick={() => setMenu("contact")}>Contact</p>
+            <p onClick={() => handleMenuClick("contact")}>Contact</p>
           </Link>
         </li>
       </ul>
       <Link className="nav__menu-link" to="/contact">
-        <div className="nav__connect" onClick={() => setMenu("")}>
+        <div className="nav__connect" onClick={() => handleMenuClick("")}>
           Connect with me
         </div>
       </Link>
