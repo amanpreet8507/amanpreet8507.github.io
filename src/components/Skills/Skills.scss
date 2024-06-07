@@ -33,7 +33,8 @@
     @include mobile {
       width: 130px;
       right: -20px;
-      bottom: -10px    }
+      bottom: -10px;
+    }
   }
   &__format {
     display: flex;
@@ -47,6 +48,7 @@
     cursor: pointer;
     @include mobile {
       padding: 32px;
+      width: 82%;
     }
   }
   &__container {
@@ -56,6 +58,7 @@
     margin-bottom: 80px;
     @include mobile {
       grid-template-columns: 1fr;
+      width: 100%;
     }
   }
   &__format h3 {
@@ -89,6 +92,9 @@
   &__skills-container {
     display: flex;
     gap: 10px;
+    @include mobile {
+      flex-wrap: wrap;
+    }
   }
   &__skill {
     background-image: linear-gradient(270deg, #ba6210 50.41%, #ff0000);
