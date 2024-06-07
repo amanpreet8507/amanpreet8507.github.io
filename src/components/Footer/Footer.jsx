@@ -16,13 +16,13 @@ const Footer = () => {
             city.
           </p>
         </div>
-        <div className="footer__top-right">
+        {/* <div className="footer__top-right">
           <div className="footer__email-input">
             <img src={profileIcon} alt="profile icon" />
             <input type="email" placeholder="Enter your email" />
           </div>
           <div className="footer__subscribe">Subscribe</div>
-        </div>
+        </div> */}
       </div>
       <div className="footer__arrow">
         <AnchorLink offset="100" href="#nav">
