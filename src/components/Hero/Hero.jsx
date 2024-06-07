@@ -19,8 +19,8 @@ const Hero = () => {
         <Link to="/contact" className="hero__link">
           <div className="hero__connect">Connect With Me</div>
         </Link>
-        <Link to="" className="hero__link">
-        <div className="hero__resume">My Resume</div>
+        <Link to="https://github.com/amanpreet8507/amanpreet8507.github.io-doc-resume.pdf/blob/main/Amanpreet%20Kaur%20Resume.pdf" className="hero__link" target="_blank" rel="noopener noreferrer">
+          <div className="hero__resume">My Resume</div>
         </Link>
       </div>
     </div>
