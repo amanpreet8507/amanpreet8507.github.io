@@ -25,10 +25,10 @@ const Skills = () => {
                   </p>
                 ))}
               </div>
-              <div className="skills__readmore">
+              {/* <div className="skills__readmore">
                 <p>Read More</p>
                 <img src={chevron} alt="skills" />
-              </div>
+              </div> */}
             </div>
           );
         })}
