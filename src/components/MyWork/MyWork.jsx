@@ -4,6 +4,7 @@ import MyWorkData from "../../assets/data/mywork";
 import { Tilt } from "react-tilt";
 import chevron from "../../assets/images/chevron_right-24px.svg";
 import icon from "../../assets/images/background.jpg";
+import { Link } from "react-router-dom";
 
 const defaultOptions = {
   reverse: false,
@@ -27,12 +28,11 @@ const MyWork = () => {
       <div className="mywork__container">
         {MyWorkData.map((work, index) => {
           return (
-            <Tilt key={index} options={defaultOptions} >
-              <img
-                src={work.project_img}
-                alt="Project Image"
-              />
-            </Tilt>
+            <a href={work.link}>
+              <Tilt key={index} options={defaultOptions}>
+                <img src={work.project_img} alt="Project Image" />
+              </Tilt>
+            </a>
           );
         })}
       </div>
