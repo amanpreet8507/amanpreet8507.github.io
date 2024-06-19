@@ -29,7 +29,6 @@ const MyWork = () => {
           return (
             <Tilt key={index} options={defaultOptions} >
               <img
-                className="mywork__img"
                 src={work.project_img}
                 alt="Project Image"
               />

@@ -1,5 +1,5 @@
 import inStock_img from "../images/InStockProject.png";
-
+import brainflix_img from "../images/brainflix.png";
 const MyWorkData = [
   {
     id: 1,
@@ -9,9 +9,9 @@ const MyWorkData = [
   },
   {
     id: 2,
-    project_name: "In Stock",
+    project_name: "Brainflix",
     description:"InStock in a fully responsive and full stack application for warehouses to keep a record of stock",
-    project_img: inStock_img,
+    project_img: brainflix_img,
   },{
     id: 3,
     project_name: "In Stock",
